@@ -1,5 +1,9 @@
-import React from "react";
+import { Hero } from "../Partials/Hero";
 
 export const Home = () => {
-  return <section></section>;
+  return (
+    <section>
+      <Hero />
+    </section>
+  );
 };
