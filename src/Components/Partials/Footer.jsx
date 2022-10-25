@@ -48,8 +48,6 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const StyledBtn = styled.button``;
-
 export const Footer = () => {
   return (
     <StyledFooter>
@@ -71,7 +69,7 @@ export const Footer = () => {
           ></input>
           <textarea placeholder="Kommentar"></textarea>
         </fieldset>
-        <StyledBtn>Indsend</StyledBtn>
+        <button>Indsend</button>
       </form>
 
       <div className="right-footer">
