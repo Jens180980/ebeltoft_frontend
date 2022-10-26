@@ -1,8 +1,8 @@
 import create from "zustand";
-import createPostSlice from "./slices/createPostSlice";
+import createDataSlice from "./slices/createDataSlice";
 
 const useStore = create((set, get) => ({
-  ...createPostSlice(set, get),
+  ...createDataSlice(set, get),
 }));
 
 export default useStore;

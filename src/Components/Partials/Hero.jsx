@@ -3,7 +3,7 @@ import BGimage from "../../Assets/hero_front.jpg";
 
 const StyledHero = styled.div`
   width: 100wv;
-  height: 100vh;
+  height: 110vh;
   margin-top: -15vh;
   background-image: url(${BGimage});
   background-size: 100vw 100vh;
