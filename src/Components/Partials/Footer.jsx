@@ -28,19 +28,26 @@ const StyledFooter = styled.footer`
         }
       }
     }
-    button {
-      background-color: #aebf35;
-      border: none;
-      border-radius: 5px;
-      margin-top: 2rem;
-      padding: 1rem 3rem;
-      text-transform: uppercase;
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
+  }
+  button {
+    background-color: #aebf35;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 300ms linear;
+
+    &:hover {
+      color: #aebf35;
+      background-color: #fff;
+      border: 1px solid #aebf35;
     }
   }
-
   .right-footer {
     display: flex;
     flex-direction: column;

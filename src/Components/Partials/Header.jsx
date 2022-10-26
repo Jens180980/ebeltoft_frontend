@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   background-color: ${(props) => props.bgColor || "#80a7bf"};
-  padding: 1rem;
+  padding: 1.5rem 3rem;
 `;
 
 export const Header = () => {
