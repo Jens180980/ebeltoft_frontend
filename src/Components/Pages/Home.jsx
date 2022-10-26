@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Slider } from "../Partials/Slider";
 
 import wave from "../../Assets/Waves1.png";
+import { Button } from "../Partials/Button";
 
 const StyledSubHeader = styled.section`
   width: 80vw;
@@ -30,7 +31,8 @@ const StyledSlider = styled.div`
     .text-wrap {
       margin: 2rem 0;
       display: flex;
-      justify-content: right;
+      flex-direction: column;
+      align-items: end;
 
       p {
         width: 70%;
@@ -58,6 +60,7 @@ export const Home = () => {
               dicta natus eos. Repellat laboriosam reiciendis aut dicta quas
               aliquid rem harum neque at aperiam temporibus fugit dolor.
             </p>
+            <Button>Se boliger</Button>
           </div>
         </div>
       </StyledSlider>
