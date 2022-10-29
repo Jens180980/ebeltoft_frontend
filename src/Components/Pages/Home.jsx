@@ -45,7 +45,7 @@ const StyledSlider = styled.div`
     }
   }
   button {
-    background-color: transparent;
+    background-color: ${(props) => props.theme.colors.white};
     color: ${(props) => props.theme.colors.green};
     border: 1px solid ${(props) => props.theme.colors.green};
     padding: 1em 3em;

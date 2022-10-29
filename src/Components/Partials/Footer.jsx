@@ -37,7 +37,7 @@ const StyledFooter = styled.footer`
     padding: 1rem 3rem;
     text-transform: uppercase;
     color: ${(props) => props.theme.colors.white};
-    font-weight: 700;
+    font-weight: 400;
     font-size: ${(props) => props.theme.fontSize.button};
     cursor: pointer;
     transition: all 300ms linear;

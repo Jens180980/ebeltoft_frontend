@@ -6,12 +6,25 @@ import { useState, useEffect } from "react";
 
 const StyledHeader = styled.header`
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 100;
   display: flex;
   align-items: center;
-  background-color: ${(props) => props.bgColor || "#80a7bf"};
-  padding: 1.5rem 3rem;
+
+  .headerAtTop {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    background-color: transparent;
+    transition: all 300ms linear;
+  }
+
+  .headerNotAtTop {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    background-color: ${(props) => props.theme.colors.darkblue};
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    transition: all 300ms linear;
+  }
 `;
 
 export const Header = () => {
@@ -21,6 +34,7 @@ export const Header = () => {
     const handleScroll = () => {
       const position = window.pageYOffset;
       setScrollPosition(position);
+      toogleClassName(scrollPosition);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
 
@@ -28,12 +42,21 @@ export const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollPosition]);
+
+  const toogleClassName = (scrollPosition) => {
+    scrollPosition > 100
+      ? (document.getElementById("headerWrapper").className = "headerNotAtTop")
+      : (document.getElementById("headerWrapper").className = "headerAtTop");
+  };
+
   return (
-    <StyledHeader bgColor={scrollPosition > 100 ? "#80a7bf" : "transparent"}>
-      <NavLink to="/">
-        <img src={logo_img} alt="logo" />
-      </NavLink>
-      <Nav />
+    <StyledHeader>
+      <div id="headerWrapper" className="headerAtTop">
+        <NavLink to="/">
+          <img src={logo_img} alt="logo" />
+        </NavLink>
+        <Nav />
+      </div>
     </StyledHeader>
   );
 };
