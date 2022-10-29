@@ -8,25 +8,25 @@ margin: 4rem 0;
   margin 0 auto;
 
   h3 {
-    font-size: 1.8rem;
+    font-size: ${(props) => props.theme.fontSize.h3};
   }
 }
   button {
     margin-top: 3rem;
     background-color: transparent;
-    color: #aebf35;
-    border: 1px solid #aebf35;
+    color: ${(props) => props.theme.colors.green};
+    border: 1px solid ${(props) => props.theme.colors.green};
     padding: 1em 3em;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: ${(props) => props.theme.fontSize.button};
     transition: all 300ms linear;
 
     &:hover {
-      background-color: #aebf35;
-      color: #fff;
-      border: 1px solid #fff;
+      background-color: ${(props) => props.theme.colors.green};
+      color: ${(props) => props.theme.colors.white};
+      border: 1px solid ${(props) => props.theme.colors.white};
     }
   }
 `;

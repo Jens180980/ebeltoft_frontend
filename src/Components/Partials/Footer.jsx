@@ -3,10 +3,10 @@ import styled from "styled-components";
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
-  background-color: #80a7bf;
+  background-color: ${(props) => props.theme.colors.darkblue};
   padding: 5rem;
   margin-top: 10rem;
-  color: white;
+  color: ${(props) => props.theme.colors.white};
 
   form {
     fieldset {
@@ -19,33 +19,33 @@ const StyledFooter = styled.footer`
       textarea {
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid ${(props) => props.theme.colors.white};
         padding: 1rem 0;
 
         ::placeholder {
-          color: white;
+          color: ${(props) => props.theme.colors.white};
           font-weight: 700;
         }
       }
     }
   }
   button {
-    background-color: #aebf35;
+    background-color: ${(props) => props.theme.colors.green};
     border: none;
     border-radius: 5px;
     margin-top: 2rem;
     padding: 1rem 3rem;
     text-transform: uppercase;
-    color: white;
+    color: ${(props) => props.theme.colors.white};
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: ${(props) => props.theme.fontSize.button};
     cursor: pointer;
     transition: all 300ms linear;
 
     &:hover {
-      color: #aebf35;
-      background-color: #fff;
-      border: 1px solid #aebf35;
+      color: ${(props) => props.theme.colors.green};
+      background-color: ${(props) => props.theme.colors.white};
+      border: 1px solid ${(props) => props.theme.colors.green};
     }
   }
   .right-footer {

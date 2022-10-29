@@ -5,12 +5,12 @@ const StyledInfobanner = styled.section`
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: #80a7bf;
-  color: #fff;
+  background-color: ${(props) => props.theme.colors.darkblue};
+  color: ${(props) => props.theme.colors.white};
   padding: 2rem 0;
 
   h3 {
-    font-size: 3rem;
+    font-size: ${(props) => props.theme.fontSize.h3};
     margin: 0;
   }
 `;

@@ -1,8 +1,8 @@
 import create from "zustand";
-import createDataSlice from "./slices/createDataSlice";
+import sliderImagesSlice from "./slices/sliderImagesSlice";
 
 const useStore = create((set, get) => ({
-  ...createDataSlice(set, get),
+  ...sliderImagesSlice(set, get),
 }));
 
 export default useStore;

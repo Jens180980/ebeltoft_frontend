@@ -4,6 +4,7 @@ import { Slider } from "../Partials/Slider";
 import { useNavigate } from "react-router-dom";
 
 import wave from "../../Assets/Waves1.png";
+import heroFront from "../../Assets/hero_front.jpg";
 
 import { InfoBanner } from "../Partials/InfoBanner";
 import { HorizontalScroll } from "../Partials/HorizontalScroll";
@@ -16,7 +17,7 @@ const StyledSubHeader = styled.section`
   justify-content: center;
 
   h2 {
-    font-size: 3rem;
+    font-size: ${(props) => props.theme.fontSize.h2};
     width: 35vw;
     text-align: center;
   }
@@ -45,19 +46,19 @@ const StyledSlider = styled.div`
   }
   button {
     background-color: transparent;
-    color: #aebf35;
-    border: 1px solid #aebf35;
+    color: ${(props) => props.theme.colors.green};
+    border: 1px solid ${(props) => props.theme.colors.green};
     padding: 1em 3em;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: ${(props) => props.theme.fontSize.button};
     transition: all 300ms linear;
   
     &:hover {
-      background-color: #aebf35;
-      color: #fff;
-      border: 1px solid #fff;
+      background-color: ${(props) => props.theme.colors.green};
+      color: ${(props) => props.theme.colors.white};
+      border: 1px solid ${(props) => props.theme.colors.white};
     }
 
   }
@@ -72,7 +73,7 @@ export const Home = () => {
   };
   return (
     <section>
-      <Hero />
+      <Hero imgPath={heroFront} />
       <StyledSubHeader>
         <h2>Nye attraktive boliger med udsigt til vandet</h2>
       </StyledSubHeader>

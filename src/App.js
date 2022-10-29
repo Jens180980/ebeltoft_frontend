@@ -4,17 +4,20 @@ import { Header } from "./Components/Partials/Header";
 import { Main } from "./Components/Partials/Main";
 import { Footer } from "./Components/Partials/Footer";
 import "./Assets/scss/app.scss";
+import Theme from "./Assets/scss/Theme";
 
 function App() {
   return (
     <section>
-      <BrowserRouter>
-        <Header />
-        <Main>
-          <AllRoutes />
-        </Main>
-        <Footer />
-      </BrowserRouter>
+      <Theme>
+        <BrowserRouter>
+          <Header />
+          <Main>
+            <AllRoutes />
+          </Main>
+          <Footer />
+        </BrowserRouter>
+      </Theme>
     </section>
   );
 }
