@@ -26,18 +26,21 @@ const StyledHero = styled.div`
 
   h2 {
     font-size: ${(props) => props.theme.fontSize.h2};
+    text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.4),
+      1px -1px 3px rgba(0, 0, 0, 0.2), -1px 1px 3px rgba(0, 0, 0, 0.2),
+      1px 1px 0 rgba(0, 0, 0, 0.2);
   }
 
-  p {
-    font-size: ${(props) => props.theme.fontSize.p};
+  h4 {
+    font-size: ${(props) => props.theme.fontSize.h4};
   }
 `;
 
-export const Hero = ({ imgPath }) => {
+export const Hero = ({ imgPath, headerTxt, subHeaderTxt }) => {
   return (
     <StyledHero imgPath={imgPath}>
-      <h2>Ebeltoft Havnefront</h2>
-      <p>Attraktive boliger tæt på vandet og naturen</p>
+      <h2>{headerTxt}</h2>
+      <h4>{subHeaderTxt}</h4>
     </StyledHero>
   );
 };

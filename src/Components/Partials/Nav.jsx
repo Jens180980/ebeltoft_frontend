@@ -99,6 +99,15 @@ export const Nav = () => {
         <NavLink id="gallery" className="menu-item" to="/galleri">
           Galleri
         </NavLink>
+        <NavLink id="faq" className="menu-item" to="/faq">
+          FAQ
+        </NavLink>
+        <NavLink id="contacts" className="menu-item" to="/kontakter">
+          Kontakter
+        </NavLink>
+        <NavLink id="documents" className="menu-item" to="/dokumenter">
+          Dokumenter
+        </NavLink>
       </Menu>
     </StyledNav>
   );

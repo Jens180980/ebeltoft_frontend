@@ -4,6 +4,9 @@ import { SeeHomes } from "../Pages/SeeHomes";
 import { About } from "../Pages/About";
 import { AboutCity } from "../Pages/AboutCity";
 import { Gallery } from "../Pages/Gallery";
+import { Faq } from "../Pages/Faq";
+import { Contacts } from "../Pages/Contacts";
+import { Documents } from "../Pages/Documents";
 
 export const AllRoutes = () => {
   return (
@@ -17,6 +20,9 @@ export const AllRoutes = () => {
       <Route path="/om-ebeltoft-havnefront" element={<About />}></Route>
       <Route path="/om-ebeltoft-by" element={<AboutCity />}></Route>
       <Route path="/galleri" element={<Gallery />}></Route>
+      <Route path="/faq" element={<Faq />}></Route>
+      <Route path="/kontakter" element={<Contacts />}></Route>
+      <Route path="/dokumenter" element={<Documents />}></Route>
     </Routes>
   );
 };

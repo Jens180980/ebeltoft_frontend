@@ -73,7 +73,11 @@ export const Home = () => {
   };
   return (
     <section>
-      <Hero imgPath={heroFront} />
+      <Hero
+        imgPath={heroFront}
+        headerTxt="Ebeltoft Havnefront"
+        subHeaderTxt="Attraktive boliger tæt på vandet og naturen"
+      />
       <StyledSubHeader>
         <h2>Nye attraktive boliger med udsigt til vandet</h2>
       </StyledSubHeader>
