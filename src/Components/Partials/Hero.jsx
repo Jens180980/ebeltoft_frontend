@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledHero = styled.div`
   position: relative;
   width: 100wv;
-  height: 110vh;
+  height: 100vh;
   margin-top: -15vh;
   background-image: url(${(props) => props.imgPath});
   background-size: 100vw 100vh;
