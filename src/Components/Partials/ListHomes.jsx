@@ -1,10 +1,16 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledTable = styled.section`
   width: 80%;
   margin: 6rem auto;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
   .wrapper {
     width: 100%;
     padding: 0 1rem;
@@ -44,8 +50,6 @@ export const ListHomes = () => {
     getData();
   }, []);
 
-  console.log(Homes);
-
   return (
     <StyledTable>
       <table className="wrapper">
@@ -60,13 +64,15 @@ export const ListHomes = () => {
         {Homes &&
           Homes.map((item) => {
             return (
-              <tr key={item.id}>
-                <td>{item.acf.type}</td>
-                <td>{item.acf.area} m2</td>
-                <td>{item.acf.rooms}</td>
-                <td>{Number(item.acf.price).toLocaleString()} kr.</td>
-                <td>{item.acf.status}</td>
-              </tr>
+              <NavLink key={item.id} to={`/se-boliger/${item.id}`}>
+                <tr>
+                  <td>{item.acf.type}</td>
+                  <td>{item.acf.area} m2</td>
+                  <td>{item.acf.rooms}</td>
+                  <td>{Number(item.acf.price).toLocaleString()} kr.</td>
+                  <td>{item.acf.status}</td>
+                </tr>
+              </NavLink>
             );
           })}
       </table>
