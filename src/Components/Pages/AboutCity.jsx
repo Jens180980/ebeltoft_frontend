@@ -11,7 +11,7 @@ import { SecondaryBtn } from "../Partials/Buttons";
 
 const StyledAboutCity = styled.section`
   position: relative;
-  margin-bottom: 20rem;
+
   h3 {
     font-size: ${(props) => props.theme.fontSize.h3};
   }
@@ -88,6 +88,7 @@ const StyledAboutCity = styled.section`
     display: flex;
     width: 80%;
     margin: 4rem auto;
+    margin-bottom: 0;
 
     .left {
       width: 50%;
@@ -101,9 +102,13 @@ const StyledAboutCity = styled.section`
     }
 
     .right {
-      height: 50%;
       width: 50%;
-      overflow: hiddden;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        display: block;
+      }
     }
   }
 
@@ -118,7 +123,7 @@ const StyledAboutCity = styled.section`
 
   .horizontal-wave {
     position: absolute;
-    bottom: -40vh;
+    bottom: 40vh;
     right: -30vw;
     z-index: -10;
     width: 100vw;

@@ -8,7 +8,6 @@ const StyledFooter = styled.footer`
   justify-content: space-between;
   background-color: ${(props) => props.theme.colors.darkblue};
   padding: 5rem;
-  margin-top: 10rem;
   color: ${(props) => props.theme.colors.white};
 
   form {
