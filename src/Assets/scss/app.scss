@@ -6,3 +6,16 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "freight-text-pro", serif;
+  font-weight: 400;
+}
+
+p,
+button {
+  font-family: "freight-sans-pro", sans-serif;
+}

@@ -19,7 +19,7 @@ const theme = {
     h3: "2.6em",
     h2: "3.5em",
     h1: "5em",
-    button: "2em",
+    button: "1.5em",
     navItems: "1.1em",
   },
 };

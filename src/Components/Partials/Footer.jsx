@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import edcLogo from "../../Assets/edc_logo.png";
+import homeLogo from "../../Assets/home_logo.png";
+import { SecondaryBtn } from "./Buttons";
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -29,29 +32,25 @@ const StyledFooter = styled.footer`
       }
     }
   }
-  button {
-    background-color: ${(props) => props.theme.colors.green};
-    border: none;
-    border-radius: 5px;
-    margin-top: 2rem;
-    padding: 1rem 3rem;
-    text-transform: uppercase;
-    color: ${(props) => props.theme.colors.white};
-    font-weight: 400;
-    font-size: ${(props) => props.theme.fontSize.button};
-    cursor: pointer;
-    transition: all 300ms linear;
 
-    &:hover {
-      color: ${(props) => props.theme.colors.green};
-      background-color: ${(props) => props.theme.colors.white};
-      border: 1px solid ${(props) => props.theme.colors.green};
+  .right-footer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 60%;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
-  .right-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+  button {
+    margin-top: 2rem;
   }
 `;
 
@@ -76,14 +75,21 @@ export const Footer = () => {
           ></input>
           <textarea placeholder="Kommentar"></textarea>
         </fieldset>
-        <button>Indsend</button>
+        <SecondaryBtn>Indsend</SecondaryBtn>
       </form>
 
       <div className="right-footer">
-        <p>EDC Logo</p>
         <div>
-          <p>Nygade 62, 8888 Ebeltoft</p>
-          <p>88 88 88 88</p>
+          <img src={edcLogo} alt="EDC logo" />
+          <p>
+            Nygade 62 <br /> 8400 Ebeltoft <br /> 86 34 27 00
+          </p>
+        </div>
+        <div>
+          <img src={homeLogo} alt="Home logo" />
+          <p>
+            Strandvejen 25C <br /> 8400 Ebeltoft <br /> 86 34 15 33
+          </p>
         </div>
       </div>
     </StyledFooter>
