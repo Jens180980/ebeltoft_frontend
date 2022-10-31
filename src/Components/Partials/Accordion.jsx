@@ -6,7 +6,8 @@ import { IconContext } from "react-icons";
 
 const StyledAccordion = styled.section`
   width: 80%;
-  margin: 4rem auto;
+  margin: 0 auto;
+  margin-bottom: 1rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.green};
 
   .closed {
