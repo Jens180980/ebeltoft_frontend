@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { useState, useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { NavLink } from "react-router-dom";
 // import "../../Assets/scss/burger.css";
 import styled from "styled-components";
+import { MenuContent } from "../Store/MenuCtx";
 
 const StyledNav = styled.nav`
   /* Position and sizing of burger button */
@@ -84,28 +87,65 @@ const StyledNav = styled.nav`
 `;
 
 export const Nav = () => {
+  const ctx = useContext(MenuContent);
+  console.log(ctx);
   return (
     <StyledNav>
-      <Menu right>
-        <NavLink id="see_homes" className="menu-item" to="/se-boliger">
+      <Menu right isOpen={ctx.isMenuOpen}>
+        <NavLink
+          id="see_homes"
+          className="menu-item"
+          to="/se-boliger"
+          onClick={ctx.toogleMenu}
+        >
           Se Boliger
         </NavLink>
-        <NavLink id="about" className="menu-item" to="/om-ebeltoft-havnefront">
+        <NavLink
+          id="about"
+          className="menu-item"
+          to="/om-ebeltoft-havnefront"
+          onClick={ctx.toogleMenu}
+        >
           Om Ebeltoft Havnefront
         </NavLink>
-        <NavLink id="about-city" className="menu-item" to="/om-ebeltoft-by">
+        <NavLink
+          id="about-city"
+          className="menu-item"
+          to="/om-ebeltoft-by"
+          onClick={ctx.toogleMenu}
+        >
           Om Ebeltoft By
         </NavLink>
-        <NavLink id="gallery" className="menu-item" to="/galleri">
+        <NavLink
+          id="gallery"
+          className="menu-item"
+          to="/galleri"
+          onClick={ctx.toogleMenu}
+        >
           Galleri
         </NavLink>
-        <NavLink id="faq" className="menu-item" to="/faq">
+        <NavLink
+          id="faq"
+          className="menu-item"
+          to="/faq"
+          onClick={ctx.toogleMenu}
+        >
           FAQ
         </NavLink>
-        <NavLink id="contacts" className="menu-item" to="/kontakter">
+        <NavLink
+          id="contacts"
+          className="menu-item"
+          to="/kontakter"
+          onClick={ctx.toogleMenu}
+        >
           Kontakter
         </NavLink>
-        <NavLink id="documents" className="menu-item" to="/dokumenter">
+        <NavLink
+          id="documents"
+          className="menu-item"
+          to="/dokumenter"
+          onClick={ctx.toogleMenu}
+        >
           Dokumenter
         </NavLink>
       </Menu>

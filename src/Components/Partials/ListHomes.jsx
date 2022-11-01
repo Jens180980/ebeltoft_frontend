@@ -69,7 +69,7 @@ export const ListHomes = () => {
                   <td>{item.acf.type}</td>
                   <td>{item.acf.area} m2</td>
                   <td>{item.acf.rooms}</td>
-                  <td>{Number(item.acf.price).toLocaleString()} kr.</td>
+                  <td>{item.acf.pricerange}</td>
                   <td>{item.acf.status}</td>
                 </tr>
               </NavLink>

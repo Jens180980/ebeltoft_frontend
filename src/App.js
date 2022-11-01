@@ -5,17 +5,20 @@ import { Main } from "./Components/Partials/Main";
 import { Footer } from "./Components/Partials/Footer";
 import "./Assets/scss/app.scss";
 import Theme from "./Assets/scss/Theme";
+import { MenuWrapper } from "./Components/Store/MenuCtx";
 
 function App() {
   return (
     <section>
       <Theme>
         <BrowserRouter>
-          <Header />
-          <Main>
-            <AllRoutes />
-          </Main>
-          <Footer />
+          <MenuWrapper>
+            <Header />
+            <Main>
+              <AllRoutes />
+            </Main>
+            <Footer />
+          </MenuWrapper>
         </BrowserRouter>
       </Theme>
     </section>
