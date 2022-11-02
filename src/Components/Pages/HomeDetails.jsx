@@ -2,8 +2,27 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
 import { Hero } from "../Partials/Hero";
+import styled from "styled-components";
+
+const StyledHomeDetails = styled.section`
+  .home-details {
+    width: 80%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+
+    .home-info {
+      width: 50%;
+    }
+    .drawing-wrapper {
+      img {
+        width: 80%;
+      }
+    }
+  }
+`;
 
 // HomeDetails function component
 export const HomeDetails = () => {
@@ -27,14 +46,30 @@ export const HomeDetails = () => {
   console.log(HomeDetails);
 
   return (
-    <>
-      <Hero
-        imgPath={
-          HomeDetails ? HomeDetails.acf.featured_image.sizes.large : null
-        }
-        alt="inde i bolig"
-      />
-      <div>Type bolig {HomeDetails ? HomeDetails.acf.type : null}</div>
-    </>
+    <StyledHomeDetails className="component-wrapper">
+      {HomeDetails ? (
+        <>
+          <Hero
+            imgPath={
+              HomeDetails ? HomeDetails.acf.featured_image.sizes.large : null
+            }
+            alt="inde i bolig"
+            headerTxt={"Boligtype " + HomeDetails.acf.type}
+          />
+          <section className="home-details">
+            <div className="home-info">
+              <p>Pris: {HomeDetails.acf.pricerange}</p>
+              <p>Kvadratmeter: {HomeDetails.acf.area}</p>
+              <p>Antal værelser: {HomeDetails.acf.rooms}</p>
+              <p>Beskrivelse:</p>
+              <p>{HomeDetails.acf.description}</p>
+            </div>
+            <div className="drawing-wrapper">
+              <img src={HomeDetails.acf.drawing.url} />
+            </div>
+          </section>
+        </>
+      ) : null}
+    </StyledHomeDetails>
   );
 };

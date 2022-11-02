@@ -1,8 +1,6 @@
 import { useContext } from "react";
-import { useState, useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { NavLink } from "react-router-dom";
-// import "../../Assets/scss/burger.css";
 import styled from "styled-components";
 import { MenuContent } from "../Store/MenuCtx";
 
@@ -88,7 +86,7 @@ const StyledNav = styled.nav`
 
 export const Nav = () => {
   const ctx = useContext(MenuContent);
-  console.log(ctx);
+
   return (
     <StyledNav>
       <Menu right isOpen={ctx.isMenuOpen}>
@@ -116,14 +114,7 @@ export const Nav = () => {
         >
           Om Ebeltoft By
         </NavLink>
-        <NavLink
-          id="gallery"
-          className="menu-item"
-          to="/galleri"
-          onClick={ctx.toogleMenu}
-        >
-          Galleri
-        </NavLink>
+
         <NavLink
           id="faq"
           className="menu-item"

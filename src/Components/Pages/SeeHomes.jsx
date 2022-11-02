@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Hero } from "../Partials/Hero";
 import aerial_marine from "../../Assets/aerial_marine.jpg";
-import model from "../../Assets/Situationsplan_2.jpg";
+import model from "../../Assets/Situationsplan_square.png";
 import wave from "../../Assets/wave-vertical.png";
 import { ListHomes } from "../Partials/ListHomes";
 import { NavLink } from "react-router-dom";
@@ -24,7 +24,7 @@ const StyledSeeHomes = styled.section`
 
     .img-wrapper {
       position: relative;
-      width: 80vw;
+      width: 50vw;
       margin: 2rem auto;
       overflow: hidden;
 
@@ -48,33 +48,33 @@ const StyledSeeHomes = styled.section`
       }
 
       #first-a {
-        top: 41%;
-        left: 48.5%;
+        top: 11.5%;
+        left: 69%;
       }
 
       #second-a {
-        top: 48%;
-        left: 43.5%;
+        top: 28.8%;
+        left: 59.8%;
       }
 
       #third-a {
-        top: 55%;
-        left: 40%;
-      }
-
-      #first-b {
-        top: 43.3%;
+        top: 45.5%;
         left: 54%;
       }
 
+      #first-b {
+        top: 17.2%;
+        left: 78.8%;
+      }
+
       #second-b {
-        top: 50.3%;
-        left: 49%;
+        top: 34.3%;
+        left: 69.5%;
       }
 
       #third-b {
-        top: 56.7%;
-        left: 46%;
+        top: 49.6%;
+        left: 64.4%;
       }
     }
   }
