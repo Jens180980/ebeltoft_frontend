@@ -76,6 +76,67 @@ const StyledSeeHomes = styled.section`
         top: 49.6%;
         left: 64.4%;
       }
+      #first-c {
+        top: 20%;
+        left: 82.5%;
+      }
+
+      #second-c {
+        top: 37%;
+        left: 73.2%;
+      }
+
+      #third-c {
+        top: 50.5%;
+        left: 68.8%;
+      }
+
+      #first-d {
+        top: 60%;
+        left: 42%;
+      }
+
+      #second-d {
+        top: 75%;
+        left: 34.5%;
+      }
+
+      #first-e {
+        top: 64.4%;
+        left: 46.7%;
+      }
+
+      #second-e {
+        top: 79.6%;
+        left: 38.8%;
+      }
+      #first-f {
+        top: 66.8%;
+        left: 51.8%;
+      }
+
+      #second-f {
+        top: 82.5%;
+        left: 43.8%;
+      }
+      #first-g {
+        top: 69.5%;
+        left: 54.5%;
+      }
+
+      #second-g {
+        top: 84.6%;
+        left: 46.6%;
+      }
+      #first-h {
+        top: 73.5%;
+        left: 59.6%;
+      }
+
+      #second-h {
+        top: 89%;
+        left: 52%;
+      }
     }
   }
 `;
@@ -105,6 +166,31 @@ export const SeeHomes = () => {
             <span id="first-b" className="dots"></span>
             <span id="second-b" className="dots"></span>
             <span id="third-b" className="dots"></span>
+          </NavLink>
+          <NavLink to="se-boliger/51">
+            <span id="first-c" className="dots"></span>
+            <span id="second-c" className="dots"></span>
+            <span id="third-c" className="dots"></span>
+          </NavLink>
+          <NavLink to="se-boliger/52">
+            <span id="first-d" className="dots"></span>
+            <span id="second-d" className="dots"></span>
+          </NavLink>
+          <NavLink to="se-boliger/53">
+            <span id="first-e" className="dots"></span>
+            <span id="second-e" className="dots"></span>
+          </NavLink>
+          <NavLink to="se-boliger/54">
+            <span id="first-f" className="dots"></span>
+            <span id="second-f" className="dots"></span>
+          </NavLink>
+          <NavLink to="se-boliger/55">
+            <span id="first-g" className="dots"></span>
+            <span id="second-g" className="dots"></span>
+          </NavLink>
+          <NavLink to="se-boliger/56">
+            <span id="first-h" className="dots"></span>
+            <span id="second-h" className="dots"></span>
           </NavLink>
         </div>
       </section>
