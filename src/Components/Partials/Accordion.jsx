@@ -9,6 +9,7 @@ const StyledAccordion = styled.section`
   margin: 0 auto;
   margin-bottom: 1rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.green};
+  cursor: pointer;
 
   .closed {
     margin-left: 2rem;
@@ -20,6 +21,8 @@ const StyledAccordion = styled.section`
     h4 {
       font-size: ${(props) => props.theme.fontSize.h4};
       color: black;
+      font-family: "freight-sans-pro", sans-serif;
+      font-weight: 700;
     }
 
     svg {
@@ -42,7 +45,7 @@ export const Accordion = ({ headerTxt, contentTxt }) => {
   const toogleHandler = () => setToogleAccordion(!toogleAccordion);
 
   return (
-    <StyledAccordion>
+    <StyledAccordion onClick={toogleHandler}>
       <div className="closed">
         <h4>{headerTxt}</h4>
         {!toogleAccordion ? (

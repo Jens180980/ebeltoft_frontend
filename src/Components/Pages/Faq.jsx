@@ -10,6 +10,10 @@ const StyledFaq = styled.section`
   position: relative;
   margin-bottom: 8rem;
 
+  p {
+    font-size: ${(props) => props.theme.fontSize.p};
+  }
+
   img {
     position: absolute;
     top: 60vh;
