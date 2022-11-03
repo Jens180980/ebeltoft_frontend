@@ -9,6 +9,7 @@ import { Contacts } from "../Pages/Contacts";
 import { Documents } from "../Pages/Documents";
 import { HomeDetails } from "../Pages/HomeDetails";
 import { CommonAreas } from "../Pages/CommonAreas";
+import { Materials } from "../Pages/Materials";
 
 export const AllRoutes = () => {
   return (
@@ -25,6 +26,7 @@ export const AllRoutes = () => {
       <Route path="/kontakter" element={<Contacts />}></Route>
       <Route path="/dokumenter" element={<Documents />}></Route>
       <Route path="/faellesarealer" element={<CommonAreas />}></Route>
+      <Route path="/materialer" element={<Materials />}></Route>
     </Routes>
   );
 };

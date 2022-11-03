@@ -147,6 +147,14 @@ export const Nav = () => {
         >
           Fællesarealer
         </NavLink>
+        <NavLink
+          id="materials"
+          className="menu-item"
+          to="/materialer"
+          onClick={ctx.toogleMenu}
+        >
+          Materialer
+        </NavLink>
       </Menu>
     </StyledNav>
   );

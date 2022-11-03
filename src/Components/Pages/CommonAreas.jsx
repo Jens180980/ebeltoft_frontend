@@ -1,13 +1,7 @@
 import styled from "styled-components";
 import { Hero } from "../Partials/Hero";
-import fregattenJylland from "../../Assets/fregatten_Jylland.jpg";
-import woodenBoat from "../../Assets/wooden_boat.jpg";
-import aerialMarine2 from "../../Assets/aerial_marine2.jpg";
-import ebeltoftBy from "../../Assets/Ebeltoft_By.jpg";
-import maltFactory from "../../Assets/Maltfabrikken.jpg";
 import verticalWave from "../../Assets/wave-vertical.png";
 import horizontalWave from "../../Assets/wave-horizontal.png";
-import { SecondaryBtn } from "../Partials/Buttons";
 import drawing from "../../Assets/Situationsplan_square.png";
 import modelOutside from "../../Assets/model_outside.jpg";
 import modelOutsideVertical from "../../Assets/model_outside_vertical.jpg";
@@ -45,7 +39,7 @@ const StyledCommonAreas = styled.section`
     margin: 4rem auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-auto-rows: 20vh;
 
     .firstImg {
@@ -57,14 +51,13 @@ const StyledCommonAreas = styled.section`
     .secondImg {
       display: block;
       width: 100%;
-      grid-row: 4 / 10;
+      grid-row: 5 / 9;
       grid-column: 5 / -1;
     }
 
     .txtInGrid {
-      grid-row: 6 / 11;
+      grid-row: 6 / 9;
       grid-column: 1 / 4;
-      margin-top: -4rem;
     }
   }
 
@@ -90,6 +83,8 @@ const StyledCommonAreas = styled.section`
   }
 
   .bottom {
+    width: 80%;
+    margin: 4rem auto;
   }
   .vertical-wave {
     position: absolute;
