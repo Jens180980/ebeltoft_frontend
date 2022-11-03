@@ -117,19 +117,10 @@ const StyledAboutCity = styled.section`
   .vertical-wave {
     position: absolute;
     top: 110vh;
-    left: 0;
+    left: 10vw;
     z-index: -10;
     rotate: 180deg;
-    height: 300vh;
-  }
-
-  .horizontal-wave {
-    position: absolute;
-    bottom: 40vh;
-    right: -30vw;
-    z-index: -10;
-    width: 100vw;
-    rotate: 180deg 180deg;
+    height: 260vh;
   }
 `;
 
@@ -137,7 +128,6 @@ export const AboutCity = () => {
   return (
     <StyledAboutCity>
       <img className="vertical-wave" src={verticalWave} alt="dekoration" />
-      <img className="horizontal-wave" src={horizontalWave} alt="dekoration" />
 
       <Hero imgPath={fregattenJylland} headerTxt="Om Ebeltoft By" />
       <section className="top">

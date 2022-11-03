@@ -3,9 +3,11 @@ import { PrimaryBtn } from "./Buttons";
 import modelInside from "../../Assets/model_inside.jpg";
 import aerial from "../../Assets/aerial_3.jpg";
 import { useNavigate } from "react-router-dom";
+import verticalWave from "../../Assets/wave-vertical.png";
 
 const StyledBottomHome = styled.section`
 margin: 4rem 0;
+position: relative;
 
 button {
   margin: 2rem 10%;
@@ -63,6 +65,13 @@ button {
     grid-column: 1 / 5;
   }
 }
+
+#wave-bottom {
+  position: absolute;
+  bottom:0;
+  left: -10vw;
+  z-index: -10;
+}
 `;
 
 export const BottomHome = () => {
@@ -113,6 +122,7 @@ export const BottomHome = () => {
           </PrimaryBtn>
         </div>
       </div>
+      <img id="wave-bottom" src={verticalWave} alt="pynt" />
     </StyledBottomHome>
   );
 };

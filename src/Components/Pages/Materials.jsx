@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import { Hero } from "../Partials/Hero";
-import fregattenJylland from "../../Assets/fregatten_Jylland.jpg";
-import woodenBoat from "../../Assets/wooden_boat.jpg";
-import aerialMarine2 from "../../Assets/aerial_marine2.jpg";
-import ebeltoftBy from "../../Assets/Ebeltoft_By.jpg";
-import maltFactory from "../../Assets/Maltfabrikken.jpg";
 import verticalWave from "../../Assets/wave-vertical.png";
-import horizontalWave from "../../Assets/wave-horizontal.png";
-import { SecondaryBtn } from "../Partials/Buttons";
 import modelInside from "../../Assets/model_inside.jpg";
 import kitchen from "../../Assets/koekken.png";
 import panels from "../../Assets/lamel.png";
@@ -101,22 +94,12 @@ const StyledMaterials = styled.section`
     rotate: 180deg;
     height: 300vh;
   }
-
-  .horizontal-wave {
-    position: absolute;
-    bottom: 40vh;
-    right: -30vw;
-    z-index: -10;
-    width: 100vw;
-    rotate: 180deg 180deg;
-  }
 `;
 
 export const Materials = () => {
   return (
     <StyledMaterials>
       <img className="vertical-wave" src={verticalWave} alt="dekoration" />
-      <img className="horizontal-wave" src={horizontalWave} alt="dekoration" />
 
       <Hero imgPath={modelInside} headerTxt="Materialer" />
       <section className="top">

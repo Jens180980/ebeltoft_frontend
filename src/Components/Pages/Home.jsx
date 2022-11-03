@@ -24,10 +24,7 @@ const StyledSubHeader = styled.section`
   }
 `;
 const StyledSlider = styled.div`
-  background-image: url(${wave});
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 100vw;
+position: relative;
 margin-bottom: 4rem;
 
   .inner-wrap-slider {
@@ -49,6 +46,13 @@ flex-direction: column;
       }
     }
   }
+  }
+  #top-wave {
+    position: absolute;
+    bottom: -20vh;
+    right: -10vw;
+    z-index: -10;
+    width: 70%;
   }
 `;
 
@@ -89,6 +93,7 @@ export const Home = () => {
             </PrimaryBtn>
           </div>
         </div>
+        <img id="top-wave" src={wave} alt="pynt" />
       </StyledSlider>
       <InfoBanner />
       <HorizontalScroll />

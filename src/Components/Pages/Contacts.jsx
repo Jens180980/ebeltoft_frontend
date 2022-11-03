@@ -3,9 +3,10 @@ import { Hero } from "../Partials/Hero";
 import house_model from "../../Assets/model_inside.jpg";
 import edcLogo from "../../Assets/edc_logo.png";
 import homeLogo from "../../Assets/home_logo.png";
+import verticalWave from "../../Assets/wave-vertical.png";
 
 const StyledContacts = styled.section`
-
+position: relative;
 p {
   font-size: ${(props) => props.theme.fontSize.p};
 }
@@ -36,11 +37,19 @@ a {
   }
 }
 }
+
+#wave {
+  position: absolute;
+  top: 60vh;
+  left: -10vw;
+  z-index: -10;
+}
 `;
 
 export const Contacts = () => {
   return (
     <StyledContacts>
+      <img id="wave" src={verticalWave} alt="pynt" />
       <Hero imgPath={house_model} headerTxt="KONTAKT" />
       <p className="title">
         Ebeltoft Havnefront bliver formidlet og solgt igennem EDC og Home i

@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { Hero } from "../Partials/Hero";
 import house_model from "../../Assets/model_outside.jpg";
 import { PrimaryBtn } from "../Partials/Buttons";
+import verticalWave from "../../Assets/wave-vertical.png";
 
 const StyledDocuments = styled.section`
+  position: relative;
   .title {
     width: 70%;
     margin: 4rem auto;
@@ -29,6 +31,12 @@ const StyledDocuments = styled.section`
       }
     }
   }
+  #wave {
+    position: absolute;
+    top: 60vh;
+    left: -10vw;
+    z-index: -10;
+  }
 `;
 
 export const Documents = () => {
@@ -52,6 +60,7 @@ export const Documents = () => {
   return (
     <StyledDocuments>
       <Hero imgPath={house_model} headerTxt="Dokumenter, m. fl." />
+      <img id="wave" src={verticalWave} alt="pynt" />
       <p className="title">
         Nedenfor kan du finde dokumentation på beslutninger vedtaget bag
         projektet Ebeltoft Havnefront.

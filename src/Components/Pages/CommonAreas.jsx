@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Hero } from "../Partials/Hero";
 import verticalWave from "../../Assets/wave-vertical.png";
-import horizontalWave from "../../Assets/wave-horizontal.png";
 import drawing from "../../Assets/Situationsplan_square.png";
 import modelOutside from "../../Assets/model_outside.jpg";
 import modelOutsideVertical from "../../Assets/model_outside_vertical.jpg";
@@ -94,22 +93,12 @@ const StyledCommonAreas = styled.section`
     rotate: 180deg;
     height: 300vh;
   }
-
-  .horizontal-wave {
-    position: absolute;
-    bottom: 40vh;
-    right: -30vw;
-    z-index: -10;
-    width: 100vw;
-    rotate: 180deg 180deg;
-  }
 `;
 
 export const CommonAreas = () => {
   return (
     <StyledCommonAreas>
       <img className="vertical-wave" src={verticalWave} alt="dekoration" />
-      <img className="horizontal-wave" src={horizontalWave} alt="dekoration" />
 
       <Hero imgPath={drawing} headerTxt="Fællesarealer" />
       <section className="top">
