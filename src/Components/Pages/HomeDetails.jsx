@@ -4,8 +4,24 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Hero } from "../Partials/Hero";
 import styled from "styled-components";
+import { PrimaryBtn } from "../Partials/Buttons";
 
 const StyledHomeDetails = styled.section`
+  p {
+    font-size: ${(props) => props.theme.fontSize.p};
+  }
+  h3 {
+    font-size: ${(props) => props.theme.fontSize.h3};
+    font-weight: 700;
+  }
+  button {
+    margin-top: 2rem;
+  }
+  .header {
+    width: 80%;
+    margin: 8rem auto;
+    font-size: ${(props) => props.theme.fontSize.h2};
+  }
   .home-details {
     width: 80%;
     margin: 4rem auto;
@@ -13,6 +29,11 @@ const StyledHomeDetails = styled.section`
     justify-content: space-between;
     gap: 8rem;
 
+    .row {
+      display: flex;
+      width: 45%;
+      justify-content: space-between;
+    }
     .home-info {
       width: 50%;
     }
@@ -21,6 +42,15 @@ const StyledHomeDetails = styled.section`
         width: 80%;
       }
     }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 70%;
+    margin: 4rem auto;
+    gap: 20rem;
   }
 `;
 
@@ -56,16 +86,47 @@ export const HomeDetails = () => {
             alt="inde i bolig"
             headerTxt={"Boligtype " + HomeDetails.acf.type}
           />
+          <h2 className="header">
+            Ebeltoft Havnefront, boligtype {HomeDetails.acf.type}
+          </h2>
           <section className="home-details">
             <div className="home-info">
-              <p>Pris: {HomeDetails.acf.pricerange}</p>
-              <p>Kvadratmeter: {HomeDetails.acf.area}</p>
-              <p>Antal værelser: {HomeDetails.acf.rooms}</p>
-              <p>Beskrivelse:</p>
-              <p>{HomeDetails.acf.description}</p>
+              <div className="row">
+                <p>Areal</p> <p>{HomeDetails.acf.area}</p>
+              </div>
+              <div className="row">
+                <p>Værelser</p> <p>{HomeDetails.acf.rooms}</p>
+              </div>
+              <div className="row">
+                <p>Type</p> <p>{HomeDetails.acf.type}</p>
+              </div>
+              <div className="row">
+                <p>Pris</p> <p>{HomeDetails.acf.price}</p>
+              </div>
+              <div className="row">
+                <p>Status</p> <p>{HomeDetails.acf.status}</p>
+              </div>
             </div>
             <div className="drawing-wrapper">
-              <img src={HomeDetails.acf.drawing.url} />
+              <img src={HomeDetails.acf.drawing.url} alt="plantegning" />
+            </div>
+          </section>
+          <section className="bottom">
+            <div>
+              <h3>Materialeliste</h3>
+              <p>
+                Boligerne i Ebeltoft Havnefront bliver bygget med materialer i
+                høj standard
+              </p>
+              <PrimaryBtn>se materialeliste</PrimaryBtn>
+            </div>
+            <div>
+              <h3>Fællesarealer</h3>
+              <p>
+                Få mere info om de forskellige fællesarealer som følger med din
+                bolig
+              </p>
+              <PrimaryBtn>se fællesarealer</PrimaryBtn>
             </div>
           </section>
         </>
