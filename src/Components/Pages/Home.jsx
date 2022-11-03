@@ -1,10 +1,10 @@
 import { Hero } from "../Partials/Hero";
 import styled from "styled-components";
-import { Slider } from "../Partials/Slider";
+import { TempSlider } from "../Partials/TempSlider";
 import { useNavigate } from "react-router-dom";
 
 import wave from "../../Assets/wave-horizontal.png";
-import heroFront from "../../Assets/hero_front.jpg";
+import heroFront from "../../Assets/aerial_3.jpg";
 
 import { InfoBanner } from "../Partials/InfoBanner";
 import { HorizontalScroll } from "../Partials/HorizontalScroll";
@@ -28,7 +28,7 @@ const StyledSlider = styled.div`
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 100vw;
-  height: 90vh;
+margin-bottom: 4rem;
 
   .inner-wrap-slider {
     width: 80vw;
@@ -36,12 +36,16 @@ const StyledSlider = styled.div`
 
     .text-wrap {
       margin: 2rem 0;
-      display: flex;
-      flex-direction: column;
+display: flex;
+flex-direction: column;
       align-items: end;
 
       p {
         width: 70%;
+        font-size: ${(props) => props.theme.fontSize.p}
+      }
+      button {
+        margin-right: 56%;
       }
     }
   }
@@ -61,19 +65,24 @@ export const Home = () => {
         subHeaderTxt="Attraktive boliger tæt på vandet og naturen"
       />
       <StyledSubHeader>
-        <h2>Nye attraktive boliger med udsigt til vandet</h2>
+        <h2>
+          Ejerlejligheder med <br />
+          panorama til Ebeltoft Vig
+        </h2>
       </StyledSubHeader>
       <StyledSlider>
         <div className="inner-wrap-slider">
-          <Slider />
+          <TempSlider />
           <div className="text-wrap">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Recusandae, ab dignissimos necessitatibus sit provident porro
-              consequuntur dicta et, ratione amet voluptatibus? Est deleniti,
-              voluptatibus beatae quam quas, laboriosam aperiam nulla deserunt
-              dicta natus eos. Repellat laboriosam reiciendis aut dicta quas
-              aliquid rem harum neque at aperiam temporibus fugit dolor.
+              Med placeringen i første række og med udsigt til Ebeltoft vig, Ahl
+              Hage og Mols Bjerge, får de nye boliger ved på Ebeltoft Havnefront
+              den bedst tænkelige placering. Bygninger og overflader i hvidt og
+              sort karakteriserer omgivelserne på Ebeltoft Havnefront
+            </p>
+            <p>
+              Boligerne bliver lavet med mulighed for at inkludere et tidsløse
+              materialer i egetræsfiner, både på loft, gulv og vinduer.{" "}
             </p>
             <PrimaryBtn onClick={navigateSeeHomes}>Se Boliger</PrimaryBtn>
           </div>

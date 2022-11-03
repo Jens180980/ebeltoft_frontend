@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PrimaryBtn = styled.button`
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: transparent;
   color: ${(props) => props.theme.colors.green};
   border: 1px solid ${(props) => props.theme.colors.green};
   padding: 1em 2em;

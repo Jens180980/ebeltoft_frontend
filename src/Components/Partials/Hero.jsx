@@ -24,14 +24,17 @@ const StyledHero = styled.div`
     background-color: ${(props) => props.theme.colors.overlay};
   }
 
-  h2 {
-    font-size: ${(props) => props.theme.fontSize.h2};
-    text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.4),
-      1px -1px 3px rgba(0, 0, 0, 0.2), -1px 1px 3px rgba(0, 0, 0, 0.2),
-      1px 1px 0 rgba(0, 0, 0, 0.2);
+  h1 {
+    position: relative;
+    z-index: 20;
+    margin-block-end: 0;
+    font-size: 5rem;
   }
 
-  h4 {
+  p {
+    position: relative;
+    z-index: 20;
+    margin-block-start: 0;
     font-size: ${(props) => props.theme.fontSize.h4};
   }
 `;
@@ -39,8 +42,8 @@ const StyledHero = styled.div`
 export const Hero = ({ imgPath, headerTxt, subHeaderTxt }) => {
   return (
     <StyledHero imgPath={imgPath}>
-      <h2>{headerTxt}</h2>
-      <h4>{subHeaderTxt}</h4>
+      <h1>{headerTxt}</h1>
+      <p>{subHeaderTxt}</p>
     </StyledHero>
   );
 };

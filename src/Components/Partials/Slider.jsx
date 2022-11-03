@@ -40,29 +40,31 @@ export const Slider = () => {
 
   return (
     <StyledSlider>
-      <Carousel
-        className="inner-slider"
-        centerMode
-        centerSlidePercentage="30"
-        dynamicHeight={false}
-        showThumbs={false}
-      >
-        {Slides &&
-          Slides.map((item, index) => {
-            let imgPath;
-            ImgList &&
-              ImgList.map((img) => {
-                return item.featured_media === img.id
-                  ? (imgPath = img.media_details.sizes.large.source_url)
-                  : null;
-              });
-            return (
-              <div key={index}>
-                <img src={imgPath} alt="slider-image"></img>
-              </div>
-            );
-          })}
-      </Carousel>
+      {ImgList ? (
+        <Carousel
+          className="inner-slider"
+          centerMode
+          centerSlidePercentage="30"
+          dynamicHeight={false}
+          showThumbs={false}
+        >
+          {Slides &&
+            Slides.map((item, index) => {
+              let imgPath;
+              ImgList &&
+                ImgList.map((img) => {
+                  return item.featured_media === img.id
+                    ? (imgPath = img.media_details.sizes.large.source_url)
+                    : null;
+                });
+              return (
+                <div key={index}>
+                  <img src={imgPath} alt="slider-image"></img>
+                </div>
+              );
+            })}
+        </Carousel>
+      ) : null}
     </StyledSlider>
   );
 };

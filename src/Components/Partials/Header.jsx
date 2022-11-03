@@ -1,4 +1,4 @@
-import logo_img from "../../Assets/logo.png";
+import logo_img from "../../Assets/logo_hvid.png";
 import { Nav } from "../Partials/Nav";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
@@ -10,6 +10,10 @@ const StyledHeader = styled.header`
   z-index: 100;
   display: flex;
   align-items: center;
+
+  img {
+    width: 20%;
+  }
 
   .headerAtTop {
     width: 100%;
