@@ -40,7 +40,7 @@ const StyledAboutCity = styled.section`
     width: 80%;
     margin: 4rem auto;
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-auto-rows: 20vh;
 
@@ -53,13 +53,14 @@ const StyledAboutCity = styled.section`
     .secondImg {
       display: block;
       width: 100%;
-      grid-row: 4 / 9;
+      grid-row: 4 / 10;
       grid-column: 5 / -1;
     }
 
     .txtInGrid {
-      grid-row: 5 / 11;
+      grid-row: 6 / 11;
       grid-column: 1 / 4;
+      margin-top: -4rem;
     }
   }
 
@@ -86,7 +87,7 @@ const StyledAboutCity = styled.section`
 
   .bottom {
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: 4rem auto;
     margin-bottom: 0;
 
@@ -103,11 +104,12 @@ const StyledAboutCity = styled.section`
 
     .right {
       width: 50%;
-      height: 100%;
       overflow: hidden;
 
       img {
+        height: 100%;
         display: block;
+        translate: -20rem;
       }
     }
   }
@@ -144,34 +146,14 @@ export const AboutCity = () => {
           på spidsen af Djursland
         </h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-          repellat sunt aliquam, hic dicta ratione, animi fugit in perferendis
-          impedit unde accusantium vitae molestias magni eum dolorem.
-          Perferendis, rem voluptatem!
+          Nære naturoplevelser og en unik byhistorie udgør tilsammen det bærende
+          kromosompar, der ligger dybt indkodet i Ebeltofts DNA.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          nobis, iure repellendus et consequatur adipisci voluptas libero, quos
-          reprehenderit eligendi, ducimus sapiente consectetur enim tempora vel.
-          Accusantium recusandae dolore voluptas veniam architecto expedita,
-          aliquid deleniti culpa. Sapiente, voluptas soluta sequi iste, nobis
-          voluptate autem tempore quidem expedita ducimus nam perspiciatis?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nulla
-          eum pariatur voluptatum exercitationem obcaecati doloremque expedita
-          dignissimos molestiae, tenetur a odio culpa laboriosam numquam.
-          Similique obcaecati dolorum aperiam. Dolorum similique, pariatur iste
-          ullam incidunt nemo natus totam quibusdam exercitationem? Labore sequi
-          laudantium quo. Saepe praesentium, labore beatae perferendis soluta
-          nesciunt quas, reprehenderit cupiditate illo ad recusandae odit!
-          Soluta, nobis?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-          distinctio esse neque explicabo blanditiis nam, eligendi deleniti aut
-          nobis quia praesentium at doloribus. Vitae esse quis iusto ullam
-          impedit laudantium?
+          Præcis disse fundamentale kvaliteter er udgangspunktet for bylivet,
+          stemningen og nærområdets popularitet, og med gåafstand til det hele
+          får du størst mulig glæde af den attraktive, centrale adresse i en by,
+          der favner både det spændende og det hyggelige.
         </p>
       </section>
       <section className="grid-section">
@@ -183,26 +165,21 @@ export const AboutCity = () => {
         <img className="secondImg" src={woodenBoat} alt="sejlbåd i træ" />
         <div className="txtInGrid">
           <h3>
-            Nære naturoplevelser <br /> og en unik by
+            Nære naturoplevelser <br /> og en unik byhistorie
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-            dignissimos neque iure reiciendis fugiat perferendis nostrum dicta
-            totam ad dolores consequuntur blanditiis rerum corporis molestiae,
-            reprehenderit aperiam id molestias alias vero saepe ipsam ea ut
-            commodi. Ipsum optio voluptatum incidunt!
+            Følg sporet fra stendysser og bronzespyd til Middelalderen, hvor
+            byens købstadsprivilegier gav Ebeltoft vokseværk.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-            deleniti pariatur sint vel corporis molestiae delectus iste, quo
-            doloremque nostrum quas optio atque! Excepturi non maiores incidunt
-            ea dignissimos sunt?
+            Nogle af byens ældste huse kan dateres til begyndelsen af
+            1600-tallet, og de brostensbelagte gader og små bindingsværkshuse
+            fortæller fortsat historien på levende vis.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-            mollitia harum, corporis dolores officiis inventore quidem placeat
-            adipisci quisquam velit. Fugiat sint ea inventore doloribus magni
-            soluta. Deleniti, commodi natus.
+            Det samme gælder for havnefronten, hvor du passerer byens mest
+            ikoniske vartegn – nemlig Fregatten Jylland, som nu nyder sit otium
+            efter mange års tro tjeneste for fædrelandet.
           </p>
         </div>
       </section>
@@ -211,17 +188,15 @@ export const AboutCity = () => {
         <div className="txt-wrap">
           <h3>Populært turistmål</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
-            dolorum explicabo a porro pariatur illo, ducimus accusantium dolor
-            provident quas suscipit, quaerat modi delectus tempore.
-            Reprehenderit assumenda, eaque expedita dignissimos harum obcaecati
-            totam doloribus excepturi, sequi numquam omnis vitae. Libero quasi
-            sint repellendus expedita voluptate aliquid modi placeat qui quae.
+            Kombinationen af by- og strandliv positionerer Ebeltoft som populært
+            turistmål, og i gaderne møder du mange nordiske, europæiske og
+            selvfølgelig danske dialekter.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-            eum ad eos perspiciatis, officia aperiam repudiandae natus omnis
-            fuga recusandae.
+            Byens mange spisesteder, cafélivet og ikke mindst
+            specialforretninger løfter i dag købstadsarven, og det er en
+            fornøjelse at kunne afrunde en afslappende shoppetur med lidt godt
+            til ganen.
           </p>
         </div>
       </section>

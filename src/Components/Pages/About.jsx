@@ -3,7 +3,7 @@ import { Hero } from "../Partials/Hero";
 import aerialMarine from "../../Assets/aerial_marine.jpg";
 import birdView from "../../Assets/birdview.jpg";
 import modelOutside from "../../Assets/model_outside.jpg";
-import situationDrawing from "../../Assets/Situationsplan.jpg";
+import situationDrawing from "../../Assets/Situationsplan_square.png";
 import verticalWave from "../../Assets/wave-vertical.png";
 import horizontalWave from "../../Assets/wave-horizontal.png";
 import { PrimaryBtn } from "../Partials/Buttons";
@@ -37,13 +37,15 @@ const StyledAbout = styled.section`
     width: 80%;
     margin: 4rem auto;
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-auto-rows: 20vh;
 
     .firstImg {
       width: 100%;
-      grid-row: 1 / 6;
+      object-fit: cover;
+      display: block;
+      grid-row: 1 / 5;
       grid-column: 1 / 7;
     }
 
@@ -56,7 +58,7 @@ const StyledAbout = styled.section`
 
     .txtInGrid {
       margin-top: -8vh;
-      grid-row: 5 / 11;
+      grid-row: 5 / -1;
       grid-column: 1 / 4;
     }
   }
@@ -122,34 +124,39 @@ export const About = () => {
           Vig
         </h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-          repellat sunt aliquam, hic dicta ratione, animi fugit in perferendis
-          impedit unde accusantium vitae molestias magni eum dolorem.
-          Perferendis, rem voluptatem!
+          Med placeringen i første række og med udsigt til Ebeltoft vig, Ahl
+          Hage og Mols Bjerge, får de nye boliger ved på Ebeltoft Havnefront den
+          bedst tænkelige placering.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          nobis, iure repellendus et consequatur adipisci voluptas libero, quos
-          reprehenderit eligendi, ducimus sapiente consectetur enim tempora vel.
-          Accusantium recusandae dolore voluptas veniam architecto expedita,
-          aliquid deleniti culpa. Sapiente, voluptas soluta sequi iste, nobis
-          voluptate autem tempore quidem expedita ducimus nam perspiciatis?
+          Boligerne indrettes i fem huse med varierede facadeforløb og højder.
+          Det muliggør en unik kontakt til omgivelserne og et mangfoldigt og
+          levende miljø. Friarealerne mellem husene indrettes med
+          opholdsmuligheder og belagte flader, der gradvist fletter sig sammen
+          med kystens naturlige landskab og vegetation - her mødes by,
+          hav-kultur og natur.{" "}
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nulla
-          eum pariatur voluptatum exercitationem obcaecati doloremque expedita
-          dignissimos molestiae, tenetur a odio culpa laboriosam numquam.
-          Similique obcaecati dolorum aperiam. Dolorum similique, pariatur iste
-          ullam incidunt nemo natus totam quibusdam exercitationem? Labore sequi
-          laudantium quo. Saepe praesentium, labore beatae perferendis soluta
-          nesciunt quas, reprehenderit cupiditate illo ad recusandae odit!
-          Soluta, nobis?
+          De forskudte placeringer og planløsninger understreger også karakteren
+          af varierede og individuelle boliger. Her er god plads til udeophold
+          med lys og udsigt i fokus, og er der er indarbejdet tagterrasser med
+          adgang for beboerne fra hver trappe eller elevator. Tagterrasserne
+          indrettes og møbleres så der er ekstra plads til at nyde de gode
+          sommerdage, de lune aftener eller alle de fantastiske udsigter stedet
+          byder på.{" "}
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-          distinctio esse neque explicabo blanditiis nam, eligendi deleniti aut
-          nobis quia praesentium at doloribus. Vitae esse quis iusto ullam
-          impedit laudantium?
+          Boligerne indrettes overvejende som 2, 3 og 4 værelseslejligheder.
+          Variationen i boligernes størrelser og indretning imødekommer beboere
+          med forskellige behov og ønsker, ikke mindst for beboersegmentet 50+.
+          Der er lagt vægt på at skabe gode solfyldte og lyse boliger, hvor alle
+          har udsigt til vand, by og natur.{" "}
+        </p>
+        <p>
+          Boligernes rum er desuden tilpasset og placeret, så der dels er god
+          indbyrdes kontakt imellem dem, og så de gennem livet og over tid kan
+          tjene forskellige formål; hjemmekontor, spiserum, soverum, bibliotek,
+          hobbyrum, gæsteværelse m.v.
         </p>
       </section>
       <section className="grid-section">
@@ -164,28 +171,25 @@ export const About = () => {
             Klassisk havnemiljø møder <br /> moderne nordisk arkitektur
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-            dignissimos neque iure reiciendis fugiat perferendis nostrum dicta
-            totam ad dolores consequuntur blanditiis rerum corporis molestiae,
-            reprehenderit aperiam id molestias alias vero saepe ipsam ea ut
-            commodi. Ipsum optio voluptatum incidunt!
+            Bygninger og overflader i hvidt og sort karakteriserer omgivelserne
+            på Ebeltoft Havnefront, hvor Fregatten, Glasmuseet, og en stor del
+            af byen - ikke mindst mange bygninger, der gennem tiden er tegnet af
+            Friis & Moltke i Ebeltoft, bærer samme kendetegn.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-            deleniti pariatur sint vel corporis molestiae delectus iste, quo
-            doloremque nostrum quas optio atque! Excepturi non maiores incidunt
-            ea dignissimos sunt?
+            De hvide overflader i malet eller vandskuret murværk, de robuste
+            betonoverflader, metalplader og sort træværk - sanseindtryk som
+            leder tankerne hen på havnemiljøets kalkede huse, tjærede hyttefade,
+            planker og tovværk.{" "}
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-            mollitia harum, corporis dolores officiis inventore quidem placeat
-            adipisci quisquam velit. Fugiat sint ea inventore doloribus magni
-            soluta. Deleniti, commodi natus.
+            Farve- og materialepaletten fortsætter ind i husene og møder egetræ,
+            messing og rustfrit stål samt farver og materialer, der hører til på
+            havnen, blandt bådene og i den omgivende natur.{" "}
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
-            repellendus incidunt at est, ullam aperiam ut omnis repudiandae
-            reiciendis commodi!
+            Inde i boligerne er det f.eks. egeplanker på gulvene og akustisk
+            absorberende lofter, der kan sikre en harmonisk helhed.
           </p>
         </div>
       </section>
@@ -194,17 +198,20 @@ export const About = () => {
         <div className="txt-wrap">
           <h3>Funktionelle fællesarealer</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
-            dolorum explicabo a porro pariatur illo, ducimus accusantium dolor
-            provident quas suscipit, quaerat modi delectus tempore.
-            Reprehenderit assumenda, eaque expedita dignissimos harum obcaecati
-            totam doloribus excepturi, sequi numquam omnis vitae. Libero quasi
-            sint repellendus expedita voluptate aliquid modi placeat qui quae.
+            Der anlægges P-pladser tæt på de enkelte huse samt et antal
+            supplerende pladser samlet i tilknytning til bebyggelsen, så der
+            både er ekstra pladser og gældende krav opfyldes. Desuden forberedes
+            P-pladserne for opladefaciliteter. Der etableres cykelparkering,
+            dels nær indgangene og i parterreetagerne. Kommunen og Ebeltoft by
+            arbejder netop nu på at udføre en såkaldt landskabeligt indarbejdet
+            klimasikring ved mødet mellem bugten og byen, så også de havnære
+            dele af byen bliver godt beskyttet mod vandstandsstigninger og
+            stormflod.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-            eum ad eos perspiciatis, officia aperiam repudiandae natus omnis
-            fuga recusandae.
+            Det vil give forbedrede bygge- og anvendelsesmuligheder samt tryghed
+            for de kommende beboere, ejendomme og værdier i området – ikke
+            mindst for Ebeltoft Havnefront.
           </p>
           <PrimaryBtn>Se mere om fællesarealer</PrimaryBtn>
         </div>
@@ -212,14 +219,13 @@ export const About = () => {
       <section className="bottom">
         <h3>Klar til indflytning i 2024</h3>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-          dignissimos officiis facilis, quis quasi velit sapiente ab, fugiat
-          nam, amet assumenda adipisci pariatur expedita ipsum enim. Sapiente,
-          dolor! Quam, tenetur.
+          Ebeltoft Havnefront bliver netop nu udviklet og der skitseres fortsat,
+          så der skabes en smuk helhed med stedet og de mange ønsker, der
+          naturligt opstår, når den individuelle bolig skal indrettes.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in?
-          Dolores rem ut tempore numquam assumenda hic odit aliquid molestias.
+          Derfor kan boligernes inventar og udstyr naturligvis tilvælges, så
+          overflader, køkken, sanitet m.v. opfylder særlige ønsker.
         </p>
       </section>
     </StyledAbout>
