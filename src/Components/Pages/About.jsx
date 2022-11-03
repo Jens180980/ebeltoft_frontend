@@ -7,6 +7,7 @@ import situationDrawing from "../../Assets/Situationsplan_square.png";
 import verticalWave from "../../Assets/wave-vertical.png";
 import horizontalWave from "../../Assets/wave-horizontal.png";
 import { PrimaryBtn } from "../Partials/Buttons";
+import { useNavigate } from "react-router-dom";
 
 const StyledAbout = styled.section`
   position: relative;
@@ -112,6 +113,10 @@ const StyledAbout = styled.section`
 `;
 
 export const About = () => {
+  const navigate = useNavigate();
+  const navigateTo = (route) => {
+    navigate(route, { replace: true });
+  };
   return (
     <StyledAbout>
       <img className="vertical-wave" src={verticalWave} alt="dekoration" />
@@ -213,7 +218,9 @@ export const About = () => {
             for de kommende beboere, ejendomme og værdier i området – ikke
             mindst for Ebeltoft Havnefront.
           </p>
-          <PrimaryBtn>Se mere om fællesarealer</PrimaryBtn>
+          <PrimaryBtn onClick={() => navigateTo("/faellesarealer")}>
+            Se mere om fællesarealer
+          </PrimaryBtn>
         </div>
       </section>
       <section className="bottom">

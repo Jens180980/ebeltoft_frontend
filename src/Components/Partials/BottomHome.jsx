@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { PrimaryBtn } from "./Buttons";
 import modelInside from "../../Assets/model_inside.jpg";
 import aerial from "../../Assets/aerial_3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const StyledBottomHome = styled.section`
 margin: 4rem 0;
@@ -65,6 +66,10 @@ button {
 `;
 
 export const BottomHome = () => {
+  const navigate = useNavigate();
+  const navigateTo = (route) => {
+    navigate(route, { replace: true });
+  };
   return (
     <StyledBottomHome>
       <div className="top">
@@ -78,7 +83,9 @@ export const BottomHome = () => {
           varierede facadeforløb og højder. Det muliggør en unik kontakt til
           omgivelserne og et mangfoldigt og levende miljø.
         </p>
-        <PrimaryBtn>Læs mere</PrimaryBtn>
+        <PrimaryBtn onClick={() => navigateTo("/om-ebeltoft-havnefront")}>
+          Læs mere
+        </PrimaryBtn>
       </div>
       <div className="bottom">
         <img id="top-img" src={modelInside} alt="inde i bolig" />
@@ -101,7 +108,9 @@ export const BottomHome = () => {
         </div>
         <img id="bottom-img" src={aerial} alt="luftfoto af havn og bugt" />
         <div id="btn">
-          <PrimaryBtn>læs mere</PrimaryBtn>
+          <PrimaryBtn onClick={() => navigateTo("om-ebeltoft-by")}>
+            læs mere
+          </PrimaryBtn>
         </div>
       </div>
     </StyledBottomHome>

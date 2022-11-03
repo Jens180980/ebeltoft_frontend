@@ -1,6 +1,6 @@
 // import react hooks
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Hero } from "../Partials/Hero";
 import styled from "styled-components";
@@ -58,6 +58,11 @@ const StyledHomeDetails = styled.section`
 export const HomeDetails = () => {
   const { home_id } = useParams(0);
   const [HomeDetails, setHomeDetails] = useState();
+
+  const navigate = useNavigate();
+  const navigateTo = (route) => {
+    navigate(route, { replace: true });
+  };
 
   useEffect(() => {
     const getDetails = async () => {
@@ -118,7 +123,9 @@ export const HomeDetails = () => {
                 Boligerne i Ebeltoft Havnefront bliver bygget med materialer i
                 høj standard
               </p>
-              <PrimaryBtn>se materialeliste</PrimaryBtn>
+              <PrimaryBtn onClick={() => navigateTo("/materialer")}>
+                se materialeliste
+              </PrimaryBtn>
             </div>
             <div>
               <h3>Fællesarealer</h3>
@@ -126,7 +133,9 @@ export const HomeDetails = () => {
                 Få mere info om de forskellige fællesarealer som følger med din
                 bolig
               </p>
-              <PrimaryBtn>se fællesarealer</PrimaryBtn>
+              <PrimaryBtn onClick={() => navigateTo("/faellesarealer")}>
+                se fællesarealer
+              </PrimaryBtn>
             </div>
           </section>
         </>

@@ -49,15 +49,15 @@ const StyledMaterials = styled.section`
     grid-auto-rows: 20vh;
 
     .firstImg {
-      width: 100%;
+      width: 80%;
       grid-row: 1 / 6;
       grid-column: 1 / 7;
     }
 
     .secondImg {
       display: block;
-      width: 100%;
-      grid-row: 5 / 10;
+      width: 80%;
+      grid-row: 4 / 10;
       grid-column: 5 / -1;
     }
 

@@ -54,8 +54,8 @@ flex-direction: column;
 
 export const Home = () => {
   const navigate = useNavigate();
-  const navigateSeeHomes = () => {
-    navigate("/se-boliger", { replace: true });
+  const navigateTo = (route) => {
+    navigate(route, { replace: true });
   };
   return (
     <section>
@@ -84,7 +84,9 @@ export const Home = () => {
               Boligerne bliver lavet med mulighed for at inkludere et tidsløse
               materialer i egetræsfiner, både på loft, gulv og vinduer.{" "}
             </p>
-            <PrimaryBtn onClick={navigateSeeHomes}>Se Boliger</PrimaryBtn>
+            <PrimaryBtn onClick={() => navigateTo("/se-boliger")}>
+              Se Boliger
+            </PrimaryBtn>
           </div>
         </div>
       </StyledSlider>
